@@ -3,12 +3,10 @@
 ##not changed), then the cachesolve should retrieve the inverse from the cache.
 
   # NULL set an empty inverse matrix in the parent env (<<-)
-  makeCacheMatrix <- function(m = matrix()) {
-     
+  makeCacheMatrix <- function(m = matrix()) {   
   
   set <- function(y){
-    
-    x <<- y
+       x <<- y
     m <<- NULL
   }
   get <- function() x
@@ -19,7 +17,6 @@
 }
 
 cacheSolve <- function(x = matrix(), ...){
-  
   
   m <- x$getsolve()
   
