@@ -1,8 +1,6 @@
 ##cacheSolve: This function computes the inverse of the special "matrix" returned
-## If the inverse has already been calculated (and the matrix has
-##not changed), then the cachesolve should retrieve the inverse from the cache.
 
-  # NULL set an empty inverse matrix in the parent env (<<-)
+ ## NULL set an empty inverse matrix in the parent env (<<-)
   makeCacheMatrix <- function(m = matrix()) {   
   
   set <- function(y){
