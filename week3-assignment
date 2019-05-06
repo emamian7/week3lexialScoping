@@ -1,24 +1,11 @@
-## Put comments here that give an overall description of what your
-## functions do
+##cacheSolve: This function computes the inverse of the special "matrix" returned
+## If the inverse has already been calculated (and the matrix has
+##not changed), then the cachesolve should retrieve the inverse from the cache.
 
-## Write a short comment describing this function
-
-makeCacheMatrix <- function(x = matrix()) {
-
-}
-
-
-## Write a short comment describing this function
-
-cacheSolve <- function(x, ...) {
-        ## Return a matrix that is the inverse of 'x'
-}
-
-makeCacheMatrix <- function(x = matrix()){
+  # NULL set an empty inverse matrix in the parent env (<<-)
+  makeCacheMatrix <- function(m = matrix()) {
+     
   
-  
-  
-  m <-NULL
   set <- function(y){
     
     x <<- y
@@ -36,8 +23,8 @@ cacheSolve <- function(x = matrix(), ...){
   
   m <- x$getsolve()
   
-  
-  if(!is.null(m)){
+   ##if m already exists (the inverse is already calculated) 
+  if(!is.null(m)){                                  
     message("Getting cached matrix")
     return(m)
   }
@@ -47,3 +34,4 @@ cacheSolve <- function(x = matrix(), ...){
   x$setsolve(m)
   m
 }
+## Return a matrix that is the inverse of 'x'
